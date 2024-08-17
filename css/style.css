@@ -334,26 +334,37 @@ img {
 .top__video {
   position: fixed;
   width: calc(100% - 300px);
-  height: 100vh;
+  height: calc(100vh - 220px);
   margin-left: 300px;
   z-index: -1;
 }
 @media screen and (max-width: 960px) {
   .top__video {
+    height: 100vh;
     width: 100%;
     margin-left: 0;
   }
 }
 
+.top__video video {
+  position: absolute;
+  top: -220px;
+  height: 100vh;
+}
+@media screen and (max-width: 960px) {
+  .top__video video {
+    top: 0;
+  }
+}
+
 /* product - 建築事例を紹介 */
 .product {
-  padding-top: 680px;
+  padding-top: calc(100vh - 220px + 80px);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  z-index: 0;
 }
 @media screen and (max-width: 960px) {
   .product {
-    padding-top: 660px;
+    padding-top: calc(100vh + 60px);
   }
 }
 
